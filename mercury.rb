@@ -21,4 +21,18 @@ class Mercury < Formula
     mv 'mercury6.man', 'mercury6.1'
     man1.install ['mercury6.1']
   end
+
+  def caveats
+    <<-EOS.undent
+    The binaries are available on the PATH, and the required input files 
+    are located in #{share}. To start a new project:
+
+      cp #{share}/* .
+      # Edit as required
+      mercury6
+
+    Documentation is available as
+      man mercury6
+    EOS
+  end
 end
