@@ -1,5 +1,3 @@
-require "formula"
-
 class Jktebop < Formula
   homepage "http://www.astro.keele.ac.uk/jkt/codes/jktebop.html"
   url "http://www.astro.keele.ac.uk/jkt/codes/jktebop-v34.tgz"
