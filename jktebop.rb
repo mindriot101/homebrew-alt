@@ -6,6 +6,7 @@ class Jktebop < Formula
   option "with-examples", "Install the examples into share/#{name}"
 
   depends_on :fortran
+  depends_on "jktld" => :optional
 
   def install
     system "#{ENV.fc} -O2 -o #{name} #{name}.f"
@@ -19,5 +20,9 @@ class Jktebop < Formula
       end
       share.install "#{name}"
     end
+  end
+
+  def caveats
+    "To compute limb darkening coefficients (task 1) install jktld"
   end
 end
