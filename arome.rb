@@ -4,8 +4,6 @@ class Arome < Formula
   version "1.0.0"
   sha1 "ee33905989db392c037af3a3a7d8a5f4c8d89dcd"
 
-  depends_on :fortran
-
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
